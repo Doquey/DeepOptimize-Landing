@@ -1,0 +1,49 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  object-fit: contain;
+}
+
+.logoText {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.logoDeep {
+  color: var(--white);
+}
+
+.logoOptimize {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Tamanhos */
+.small .logoText {
+  font-size: 18px;
+}
+
+.medium .logoText {
+  font-size: 24px;
+}
+
+.large .logoText {
+  font-size: 32px;
+}
+
+/* Modo somente texto (quando não há imagem) */
+.logo:has(.logoImage:empty) .logoText {
+  margin-left: 0;
+}

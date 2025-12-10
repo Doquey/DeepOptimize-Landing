@@ -1,0 +1,170 @@
+.caseStudy {
+  padding: 120px 0;
+  background: var(--black);
+  position: relative;
+}
+
+.caseStudy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.05) 0%, transparent 70%);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.caseStudyContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+}
+
+.caseBadge {
+  display: inline-block;
+  background: rgba(0, 191, 255, 0.1);
+  border: 1px solid rgba(0, 191, 255, 0.3);
+  color: var(--secondary-blue);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.caseStudyTitle {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.caseStudyDescription {
+  font-size: 18px;
+  color: var(--light-gray);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.caseMetrics {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.metric {
+  padding: 20px;
+  background: rgba(0, 102, 255, 0.05);
+  border-left: 3px solid var(--primary-blue);
+  border-radius: 8px;
+}
+
+.metricValue {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--secondary-blue);
+  margin-bottom: 8px;
+}
+
+.metricLabel {
+  color: var(--light-gray);
+  font-size: 14px;
+}
+
+.caseOutcome h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--white);
+}
+
+.caseOutcome p {
+  color: var(--light-gray);
+  line-height: 1.8;
+}
+
+.caseStudyVisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comparisonBox {
+  background: var(--dark-gray);
+  border: 1px solid rgba(0, 102, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.before, .after {
+  text-align: center;
+  padding: 30px;
+  background: var(--near-black);
+  border-radius: 12px;
+  min-width: 180px;
+}
+
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--light-gray);
+  margin-bottom: 20px;
+}
+
+.modelSize {
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+}
+
+.accuracy, .device {
+  font-size: 14px;
+  color: var(--light-gray);
+  margin-bottom: 8px;
+}
+
+.arrow {
+  font-size: 32px;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+@media (max-width: 968px) {
+  .caseStudyContent {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .comparisonBox {
+    flex-direction: column;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .caseStudyTitle {
+    font-size: 32px;
+  }
+}
